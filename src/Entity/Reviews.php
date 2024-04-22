@@ -35,6 +35,14 @@ class Reviews
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $textReview = null;
 
+    #[ORM\ManyToOne(inversedBy: 'reviews')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Sections $sections = null;
+
+    #[ORM\ManyToOne(inversedBy: 'feedBack')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $users = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +128,30 @@ class Reviews
     public function setTextReview(?string $textReview): static
     {
         $this->textReview = $textReview;
+
+        return $this;
+    }
+
+    public function getSections(): ?Sections
+    {
+        return $this->sections;
+    }
+
+    public function setSections(?Sections $sections): static
+    {
+        $this->sections = $sections;
+
+        return $this;
+    }
+
+    public function getUserId(): ?User
+    {
+        return $this->users;
+    }
+
+    public function setUserId(?User $user_id): static
+    {
+        $this->users = $user_id;
 
         return $this;
     }
