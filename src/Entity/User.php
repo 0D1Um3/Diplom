@@ -55,7 +55,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @var Collection<int, Reviews>
      */
-    #[ORM\OneToMany(targetEntity: Reviews::class, mappedBy: 'user_id', orphanRemoval: true)]
+    #[ORM\OneToMany(targetEntity: Reviews::class, mappedBy: 'users', orphanRemoval: true)]
     private Collection $feedBack;
 
     public function __construct()
