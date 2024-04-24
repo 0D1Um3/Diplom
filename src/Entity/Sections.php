@@ -40,12 +40,6 @@ class Sections
     #[ORM\Column(length: 255)]
     private ?string $contactEmail = null;
 
-    #[ORM\Column(length: 50)]
-    private ?string $sport = null;
-
-    #[ORM\Column(length: 60)]
-    private ?string $city = null;
-
     #[ORM\Column(type: Types::TEXT)]
     private ?string $forWho = null;
 
@@ -57,6 +51,14 @@ class Sections
      */
     #[ORM\OneToMany(targetEntity: Reviews::class, mappedBy: 'sections_id', orphanRemoval: true)]
     private Collection $reviews;
+
+    #[ORM\ManyToOne(inversedBy: 'sections')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?City $cities = null;
+
+    #[ORM\ManyToOne(inversedBy: 'sections')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?TypeSport $typesSport = null;
 
     public function __construct()
     {
@@ -164,30 +166,6 @@ class Sections
         return $this;
     }
 
-    public function getSport(): ?string
-    {
-        return $this->sport;
-    }
-
-    public function setSport(string $sport): static
-    {
-        $this->sport = $sport;
-
-        return $this;
-    }
-
-    public function getCity(): ?string
-    {
-        return $this->city;
-    }
-
-    public function setCity(string $city): static
-    {
-        $this->city = $city;
-
-        return $this;
-    }
-
     public function getForWho(): ?string
     {
         return $this->forWho;
@@ -238,6 +216,30 @@ class Sections
                 $review->setSections(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCities(): ?City
+    {
+        return $this->cities;
+    }
+
+    public function setCities(?City $cities): static
+    {
+        $this->cities = $cities;
+
+        return $this;
+    }
+
+    public function getTypesSport(): ?TypeSport
+    {
+        return $this->typesSport;
+    }
+
+    public function setTypesSport(?TypeSport $typesSport): static
+    {
+        $this->typesSport = $typesSport;
 
         return $this;
     }
