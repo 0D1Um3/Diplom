@@ -2,6 +2,8 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Articles;
+use App\Entity\Images;
 use App\Entity\Sections;
 use App\Entity\Reviews;
 use App\Entity\User;
@@ -23,38 +25,23 @@ class DashboardController extends AbstractDashboardController
         $url =  $routeBuilder->setController(SectionsCrudController::class)->generateUrl();
 
         return $this->redirect($url);
-
-
-        // Option 1. You can make your dashboard redirect to some common page of your backend
-        //
-        // $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
-        // return $this->redirect($adminUrlGenerator->setController(OneOfYourCrudController::class)->generateUrl());
-
-        // Option 2. You can make your dashboard redirect to different pages depending on the user
-        //
-        // if ('jane' === $this->getUser()->getUsername()) {
-        //     return $this->redirect('...');
-        // }
-
-        // Option 3. You can render some custom template to display a proper dashboard with widgets, etc.
-        // (tip: it's easier if your template extends from @EasyAdmin/page/content.html.twig)
-        //
-        // return $this->render('some/path/my-dashboard.html.twig');
     }
 
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Html');
+            ->setTitle('ArsAthletic');
     }
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linktoRoute('Back to the website', 'fas fa-home', 'homepage');
-        yield MenuItem::linkToCrud('Sections', 'fas fa-map-marker-alt', Sections::class);
-        yield MenuItem::linkToCrud('Reviews', 'fas fa-reviews', Reviews::class);
-        yield MenuItem::linkToCrud('User', 'fas fa-user', User::class);
-        yield MenuItem::linkToCrud('City', 'fas fa-city', City::class);
-        yield MenuItem::linkToCrud('TypesSport', 'fas fa-types-sport', TypeSport::class);
+        yield MenuItem::linktoRoute('Вернуться на сайт', 'fas fa-home', 'homepage');
+        yield MenuItem::linkToCrud('Секции', 'fas fa-map-marker-alt', Sections::class);
+        yield MenuItem::linkToCrud('Отзывы', 'fas fa-reviews', Reviews::class);
+        yield MenuItem::linkToCrud('Пользователи', 'fas fa-user', User::class);
+        yield MenuItem::linkToCrud('Города', 'fas fa-city', City::class);
+        yield MenuItem::linkToCrud('Виды спорта', 'fas fa-types-sport', TypeSport::class);
+        yield MenuItem::linkToCrud('Статьи', 'fas fa-articles', Articles::class);
+        yield MenuItem::linkToCrud('Изображения', 'fas fa-images', Images::class);
     }
 }

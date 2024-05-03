@@ -3,9 +3,9 @@
 namespace App\Controller\Admin;
 
 use App\Entity\City;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class CityCrudController extends AbstractCrudController
@@ -15,14 +15,19 @@ class CityCrudController extends AbstractCrudController
         return City::class;
     }
 
-    /*
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+            ->setEntityLabelInSingular('City')
+            ->setEntityLabelInPlural('Города секций')
+            ->setSearchFields(['cityName'])
+            ->setDefaultSort(['cityName' => 'ASC']);
+    }
+
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            TextField::new('city_name'),
         ];
     }
-    */
 }

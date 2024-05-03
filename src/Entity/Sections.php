@@ -65,6 +65,12 @@ class Sections
         $this->reviews = new ArrayCollection();
     }
 
+    public function __toString(): string
+    {
+        return $this->description.''. $this->format.' '.$this->forWho.' '.$this->name.' '.$this->contactEmail.' '.
+            $this->contactPhone.' '.$this->latitude.' '.$this->longitude.' '.$this->price;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

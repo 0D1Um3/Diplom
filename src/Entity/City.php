@@ -29,19 +29,24 @@ class City
         $this->sections = new ArrayCollection();
     }
 
+    public function __toString(): string
+    {
+        return $this->cityName;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getCityName(): ?string
     {
         return $this->cityName;
     }
 
-    public function setName(string $name): static
+    public function setName(string $cityName): static
     {
-        $this->cityName = $name;
+        $this->cityName = $cityName;
 
         return $this;
     }

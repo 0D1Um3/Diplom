@@ -24,9 +24,8 @@ final class Version20240424093921 extends AbstractMigration
         $this->addSql('CREATE TABLE type_sport (id INT AUTO_INCREMENT NOT NULL, sport_name VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('ALTER TABLE reviews DROP FOREIGN KEY FK_6970EB0F9D86650F');
         $this->addSql('DROP INDEX IDX_6970EB0F9D86650F ON reviews');
-        $this->addSql('ALTER TABLE reviews CHANGE user_id user_id_id INT NOT NULL');
-        $this->addSql('ALTER TABLE reviews ADD CONSTRAINT FK_6970EB0F9D86650F FOREIGN KEY (user_id_id) REFERENCES user (id)');
-        $this->addSql('CREATE INDEX IDX_6970EB0F9D86650F ON reviews (user_id_id)');
+        $this->addSql('ALTER TABLE reviews ADD CONSTRAINT FK_6970EB0F9D86650F FOREIGN KEY (user_id) REFERENCES user (id)');
+        $this->addSql('CREATE INDEX IDX_6970EB0F9D86650F ON reviews (user_id)');
         $this->addSql('ALTER TABLE sections ADD cities_id INT NOT NULL, ADD types_sport_id INT NOT NULL');
         $this->addSql('ALTER TABLE sections ADD CONSTRAINT FK_2B964398CAC75398 FOREIGN KEY (cities_id) REFERENCES city (id)');
         $this->addSql('ALTER TABLE sections ADD CONSTRAINT FK_2B964398A2D17367 FOREIGN KEY (types_sport_id) REFERENCES type_sport (id)');

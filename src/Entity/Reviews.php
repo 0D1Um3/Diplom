@@ -43,6 +43,9 @@ class Reviews
     #[ORM\JoinColumn(nullable: false)]
     private ?User $user_id = null;
 
+    #[ORM\Column]
+    private ?int $rating = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -152,6 +155,18 @@ class Reviews
     public function setUserId(?User $user_id): static
     {
         $this->user_id = $user_id;
+
+        return $this;
+    }
+
+    public function getRating(): ?int
+    {
+        return $this->rating;
+    }
+
+    public function setRating(int $rating): static
+    {
+        $this->rating = $rating;
 
         return $this;
     }
