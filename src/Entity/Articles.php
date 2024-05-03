@@ -35,6 +35,9 @@ class Articles
     #[ORM\Column(length: 255)]
     private ?string $titleImage = null;
 
+    #[ORM\Column]
+    private ?\DateTimeImmutable $createdAt = null;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
@@ -119,6 +122,18 @@ class Articles
     public function setTitleImage(string $titleImage): static
     {
         $this->titleImage = $titleImage;
+
+        return $this;
+    }
+
+    public function getcreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setcreatedAt(\DateTimeImmutable $createdAt): static
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }
