@@ -60,6 +60,12 @@ class Sections
     #[ORM\JoinColumn(nullable: false)]
     private ?TypeSport $typesSport = null;
 
+    #[ORM\Column]
+    private ?int $countPlaces = null;
+
+    #[ORM\Column]
+    private ?bool $softDelete = null;
+
     public function __construct()
     {
         $this->reviews = new ArrayCollection();
@@ -246,6 +252,30 @@ class Sections
     public function setTypesSport(?TypeSport $typesSport): static
     {
         $this->typesSport = $typesSport;
+
+        return $this;
+    }
+
+    public function getCountPlaces(): ?int
+    {
+        return $this->countPlaces;
+    }
+
+    public function setCountPlaces(int $countPlaces): static
+    {
+        $this->countPlaces = $countPlaces;
+
+        return $this;
+    }
+
+    public function isSoftDelete(): ?bool
+    {
+        return $this->softDelete;
+    }
+
+    public function setSoftDelete(bool $softDelete): static
+    {
+        $this->softDelete = $softDelete;
 
         return $this;
     }
