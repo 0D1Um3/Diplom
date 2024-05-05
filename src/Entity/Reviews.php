@@ -37,7 +37,7 @@ class Reviews
 
     #[ORM\ManyToOne(inversedBy: 'reviews')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Sections $sections = null;
+    private ?Sections $sections_id = null;
 
     #[ORM\ManyToOne(inversedBy: 'feedBack')]
     #[ORM\JoinColumn(nullable: false)]
@@ -137,12 +137,12 @@ class Reviews
 
     public function getSections(): ?Sections
     {
-        return $this->sections;
+        return $this->sections_id;
     }
 
     public function setSections(?Sections $sections): static
     {
-        $this->sections = $sections;
+        $this->sections_id = $sections;
 
         return $this;
     }

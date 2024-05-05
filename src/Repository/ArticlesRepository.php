@@ -22,7 +22,7 @@ class ArticlesRepository extends ServiceEntityRepository
     }
 
     // Метод для выборки 6 случайных записей из таблицы articles
-    public function findRandom($limit = 6)
+    public function findRandom($limit = 5)
     {
         return $this->createQueryBuilder('articles')
             ->orderBy('RAND()')

@@ -13,7 +13,7 @@
                     <p class="slogan">Добавить спорт в свою жизнь - это просто.<br>
                         Увеличь физическую активность<br>
                         легко и увлекательно</p>
-                    <button><a href="#">Подробнее</a></button>
+                    <a href="#" class="button">Подробнее</a>
                 </div>
                 <img src="{{ asset('images/happy-man.svg') }}" alt="happy-man-exercising">
             </div>
@@ -56,10 +56,40 @@
             <div class="container">
                 <div class="all-for-you-positive">
                     <p class="title">Все для вас</p>
-
+                    <div class="positive">
+                        <img src="{{ asset('images/Ok.svg') }}" alt="Ok-image">
+                        <p>Всегда актуальные данные о школах<br>
+                            и обучающих программах</p>
+                    </div>
+                    <div class="positive">
+                        <img src="{{ asset('images/Ok.svg') }}" alt="Ok-image">
+                        <p>Только проверенные отзывы<br>
+                            реальных учеников.</p>
+                    </div>
+                    <div class="positive">
+                        <img src="{{ asset('images/Ok.svg') }}" alt="Ok-image">
+                        <p>Только надежные секции и школы<br>
+                            с высокой репутацией.</p>
+                    </div>
+                    <a href="#" class="button">Перейти в каталог</a>
                 </div>
-
+                <img src="{{ asset('images/all-for-you.svg') }}" alt="all-for-you-image" class="all-for-you-image">
             </div>
         </div>
+        <hr style="border-top: 1px solid #ccc;">
+        <div class="blog-container">
+            <div class="blog-articles">
+                <div class="title">
+                    <p>
+                        <span style="color: #018578; font-weight: bold">Статьи</span> блога
+                    </p>
+                    <a href="#">Все статьи</a>
+                </div>
+                <div class="articles">
+
+                </div>
+            </div>
+        </div>
+
     </section>
 {% endblock %}

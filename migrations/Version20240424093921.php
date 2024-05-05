@@ -45,7 +45,6 @@ final class Version20240424093921 extends AbstractMigration
         $this->addSql('ALTER TABLE sections DROP cities_id, DROP types_sport_id');
         $this->addSql('ALTER TABLE reviews DROP FOREIGN KEY FK_6970EB0F9D86650F');
         $this->addSql('DROP INDEX IDX_6970EB0F9D86650F ON reviews');
-        $this->addSql('ALTER TABLE reviews CHANGE user_id_id user_id INT NOT NULL');
         $this->addSql('ALTER TABLE reviews ADD CONSTRAINT FK_6970EB0F9D86650F FOREIGN KEY (user_id) REFERENCES user (id) ON UPDATE NO ACTION ON DELETE NO ACTION');
         $this->addSql('CREATE INDEX IDX_6970EB0F9D86650F ON reviews (user_id)');
     }
