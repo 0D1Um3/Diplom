@@ -16,4 +16,7 @@ return [
         'path' => './assets/app.js',
         'entrypoint' => true,
     ],
+    'images'=>[
+        'path'=>'./assets/images'
+    ],
 ];

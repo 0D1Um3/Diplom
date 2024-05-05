@@ -4,8 +4,70 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f53dc2a5e6ac37fef88bbe239582c87",
+    "content-hash": "8fdbc90cadca3e64231879ff592d630a",
     "packages": [
+        {
+            "name": "beberlei/doctrineextensions",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beberlei/DoctrineExtensions.git",
+                "reference": "281f1650641c2f438b0a54d8eaa7ba50ac7e3eb6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beberlei/DoctrineExtensions/zipball/281f1650641c2f438b0a54d8eaa7ba50ac7e3eb6",
+                "reference": "281f1650641c2f438b0a54d8eaa7ba50ac7e3eb6",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/orm": "^2.19 || ^3.0",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "^1.14 || ^2",
+                "doctrine/coding-standard": "^9.0.2 || ^12.0",
+                "nesbot/carbon": "^2.72 || ^3",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^8.5 || ^9.6",
+                "squizlabs/php_codesniffer": "^3.8",
+                "symfony/cache": "^5.4 || ^6.4 || ^7.0",
+                "symfony/yaml": "^5.4 || ^6.4 || ^7.0",
+                "vimeo/psalm": "^3.18 || ^5.22",
+                "zf1/zend-date": "^1.12",
+                "zf1/zend-registry": "^1.12"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DoctrineExtensions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Steve Lacey",
+                    "email": "steve@steve.ly"
+                }
+            ],
+            "description": "A set of extensions to Doctrine 2 that add support for additional query functions available in MySQL, Oracle, PostgreSQL and SQLite.",
+            "keywords": [
+                "database",
+                "doctrine",
+                "orm"
+            ],
+            "support": {
+                "source": "https://github.com/beberlei/DoctrineExtensions/tree/v1.5.0"
+            },
+            "time": "2024-03-03T17:55:15+00:00"
+        },
         {
             "name": "composer/semver",
             "version": "3.4.0",
@@ -6064,6 +6126,70 @@
             "time": "2024-04-18T09:24:21+00:00"
         },
         {
+            "name": "twig/intl-extra",
+            "version": "v3.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/intl-extra.git",
+                "reference": "39865e5d13165016a8e7ab8cc648ad2f7aa4b639"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/intl-extra/zipball/39865e5d13165016a8e7ab8cc648ad2f7aa4b639",
+                "reference": "39865e5d13165016a8e7ab8cc648ad2f7aa4b639",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/intl": "^5.4|^6.4|^7.0",
+                "twig/twig": "^3.9"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Twig\\Extra\\Intl\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "A Twig extension for Intl",
+            "homepage": "https://twig.symfony.com",
+            "keywords": [
+                "intl",
+                "twig"
+            ],
+            "support": {
+                "source": "https://github.com/twigphp/intl-extra/tree/v3.9.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/twig/twig",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-04-17T12:41:53+00:00"
+        },
+        {
             "name": "twig/twig",
             "version": "v3.9.3",
             "source": {
@@ -6293,6 +6419,87 @@
                 }
             ],
             "time": "2024-04-27T21:12:25+00:00"
+        },
+        {
+            "name": "symfony/web-profiler-bundle",
+            "version": "v7.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/web-profiler-bundle.git",
+                "reference": "a9a722210b391d7f6d97f140a5f2f7eee604d81a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/web-profiler-bundle/zipball/a9a722210b391d7f6d97f140a5f2f7eee604d81a",
+                "reference": "a9a722210b391d7f6d97f140a5f2f7eee604d81a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/config": "^6.4|^7.0",
+                "symfony/framework-bundle": "^6.4|^7.0",
+                "symfony/http-kernel": "^6.4|^7.0",
+                "symfony/routing": "^6.4|^7.0",
+                "symfony/twig-bundle": "^6.4|^7.0",
+                "twig/twig": "^3.0.4"
+            },
+            "conflict": {
+                "symfony/form": "<6.4",
+                "symfony/mailer": "<6.4",
+                "symfony/messenger": "<6.4"
+            },
+            "require-dev": {
+                "symfony/browser-kit": "^6.4|^7.0",
+                "symfony/console": "^6.4|^7.0",
+                "symfony/css-selector": "^6.4|^7.0",
+                "symfony/stopwatch": "^6.4|^7.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bundle\\WebProfilerBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides a development tool that gives detailed information about the execution of any request",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "dev"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/web-profiler-bundle/tree/v7.0.7"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-04-18T09:29:19+00:00"
         }
     ],
     "aliases": [],

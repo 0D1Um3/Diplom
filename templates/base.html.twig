@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Fit Connect{% endblock %}</title>
@@ -11,9 +11,10 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+    {% block head %}{% endblock %}
 </head>
 <body>
-{% block header %}{% endblock %}
+{{ include('header.html.twig') }}
 {% block body %}{% endblock %}
 </body>
 </html>

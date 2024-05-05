@@ -21,6 +21,15 @@ class TypeSportRepository extends ServiceEntityRepository
         parent::__construct($registry, TypeSport::class);
     }
 
+    public function findTopByEntries($limit = 3)
+    {
+        return $this->createQueryBuilder('t')
+            ->orderBy('t.entries', 'DESC')
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+    }
+
     //    /**
     //     * @return TypeSport[] Returns an array of TypeSport objects
     //     */

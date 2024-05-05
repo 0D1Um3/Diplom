@@ -21,6 +21,20 @@ class ArticlesRepository extends ServiceEntityRepository
         parent::__construct($registry, Articles::class);
     }
 
+    // Метод для выборки 6 случайных записей из таблицы articles
+    public function findRandom($limit = 6)
+    {
+        return $this->createQueryBuilder('articles')
+            ->orderBy('RAND()')
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+
+    }
+
+
+
+
     //    /**
     //     * @return Articles[] Returns an array of Articles objects
     //     */

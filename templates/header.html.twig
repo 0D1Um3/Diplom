@@ -1,7 +1,12 @@
-{% extends 'base.html.twig' %}
-
-{% block header %}
-
-<h1>Хедер</h1>
-
-{% endblock %}
+<header class="site-header">
+    <div class="wrapper site-header__wrapper">
+        <a href="#" class="brand"><img src="{{ asset('images/Logo.svg') }}" alt="brand"/></a>
+        <nav class="nav">
+            <a href="#">Каталог секций</a>
+            <a href="#">Блог</a>
+            <a href="#">Пенза</a>
+        </nav>
+        <a href="#" class="scale"><img src="{{ asset('images/Scales.svg') }}" alt="Compare"></a>
+        <button class="log-in">Войти</button>
+    </div>
+</header>

@@ -1,6 +1,65 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-<h2>Привет</h2>
+{% block head %}
+    <link rel="stylesheet" href="{{ asset('styles/index.css') }}">
+{% endblock %}
 
+{% block body %}
+    <section class="main-page">
+        <div class="title-container">
+            <div class="title-content">
+                <div class="desc">
+                    <p>Все секции вашего города<br> в одном месте</p>
+                    <p class="slogan">Добавить спорт в свою жизнь - это просто.<br>
+                        Увеличь физическую активность<br>
+                        легко и увлекательно</p>
+                    <button><a href="#">Подробнее</a></button>
+                </div>
+                <img src="{{ asset('images/happy-man.svg') }}" alt="happy-man-exercising">
+            </div>
+        </div>
+        <div class="popular-container">
+            <div class="popular-content">
+                <p class="title"><span style="color: #018578;">Популярные</span> секции</p>
+                <div class="popular-section">
+                    <div class="card">
+                        <a href="#">
+                            <img src="{{ asset('images/footbal.jpg') }}" alt="popular-section-img">
+                            <div class="card-overlay">
+                                <p class="caption">Футбол</p>
+                                <p href="#" class="go-to-catalog">Перейти в каталог</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <img src="{{ asset('images/footbal.jpg') }}" alt="popular-section-img">
+                            <div class="card-overlay">
+                                <p class="caption">Футбол</p>
+                                <p href="#" class="go-to-catalog">Перейти в каталог</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <img src="{{ asset('images/happy-man.svg') }}" alt="popular-section-img">
+                            <div class="card-overlay">
+                                <p class="caption">Футбол</p>
+                                <p href="#" class="go-to-catalog">Перейти в каталог</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="all-for-you">
+            <div class="container">
+                <div class="all-for-you-positive">
+                    <p class="title">Все для вас</p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
 {% endblock %}

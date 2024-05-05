@@ -2,7 +2,64 @@
     font-family: MyFont;
     src: url('../font/GolosText.ttf');
 }
-*{
+
+* {
     font-family: MyFont, serif;
 }
+
+header a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+
+.log-in {
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+    width: 125px;
+    border-radius: 50px;
+    margin-left: 2%;
+}
+
+.log-in {
+    background-color: #d9d9d9;
+}
+
+.brand img {
+    width: 25%;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.scale {
+    margin-left: 75px;
+}
+
+header {
+    width: 100%;
+    margin: 10px 0 25px 0;
+}
+
+.site-header__wrapper {
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav a:not(:first-child) {
+    margin-left: 75px;
+}
+
+
 
