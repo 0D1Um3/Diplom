@@ -2,6 +2,7 @@
 
 {% block head %}
     <link rel="stylesheet" href="{{ asset('styles/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/blog.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -33,18 +34,18 @@
                     </div>
                     <div class="card">
                         <a href="#">
-                            <img src="{{ asset('images/footbal.jpg') }}" alt="popular-section-img">
+                            <img src="{{ asset('images/vol.jpg') }}" alt="popular-section-img">
                             <div class="card-overlay">
-                                <p class="caption">Футбол</p>
+                                <p class="caption">Волейбол</p>
                                 <p href="#" class="go-to-catalog">Перейти в каталог</p>
                             </div>
                         </a>
                     </div>
                     <div class="card">
                         <a href="#">
-                            <img src="{{ asset('images/happy-man.svg') }}" alt="popular-section-img">
+                            <img src="{{ asset('images/pinpong.jpg') }}" alt="popular-section-img">
                             <div class="card-overlay">
-                                <p class="caption">Футбол</p>
+                                <p class="caption">Настольный тенис</p>
                                 <p href="#" class="go-to-catalog">Перейти в каталог</p>
                             </div>
                         </a>
@@ -55,7 +56,7 @@
         <div class="all-for-you">
             <div class="container">
                 <div class="all-for-you-positive">
-                    <p class="title">Все для вас</p>
+                    <p class="title-all-for-you">Все для вас</p>
                     <div class="positive">
                         <img src="{{ asset('images/Ok.svg') }}" alt="Ok-image">
                         <p>Всегда актуальные данные о школах<br>
@@ -76,20 +77,8 @@
                 <img src="{{ asset('images/all-for-you.svg') }}" alt="all-for-you-image" class="all-for-you-image">
             </div>
         </div>
-        <hr style="border-top: 1px solid #ccc;">
-        <div class="blog-container">
-            <div class="blog-articles">
-                <div class="title">
-                    <p>
-                        <span style="color: #018578; font-weight: bold">Статьи</span> блога
-                    </p>
-                    <a href="#">Все статьи</a>
-                </div>
-                <div class="articles">
+        {% include ('blog-article.html.twig') %}
 
-                </div>
-            </div>
-        </div>
 
     </section>
 {% endblock %}

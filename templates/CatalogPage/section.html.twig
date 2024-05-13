@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ asset('styles/section.css') }}">
+{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="title-container">
+            <div class="title-content">
+                <div class="info-container">
+                    <p class="section-name">Секция футбола "Зенит"</p>
+                    <p class="desc">Добро пожаловать в футбольную секцию Зенит!
+                        Разгадайте тайны игры, освоив основы с нашими практическими занятиями.
+                        Почувствуйте страсть к футболу, в нашей секции.</p>
+                </div>
+                <div class="entry-container">
+                    <div class="card-user-info">
+                        <div class="stars">
+                            <div class="rating">
+                                {% for i in 1..5 %}
+                                    {% if i <= 5 %}
+                                        <span class="star-filled">★</span>
+                                    {% else %}
+                                        <span class="star-empty">☆</span>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+
+                            <div class="int-rating">5/5</div>
+                        </div>
+                        <span class="count-reviews">10 отзывов</span>
+                        <p class="section-price">1500 Руб./Мес.</p>
+                    </div>
+                    <div class="entry-stage">
+                        <button class="comparison">
+                            <img src="{{ asset('images/Scales.svg') }}" alt="scale_img">
+                            В сравнение
+                        </button>
+                        <button class="entry">
+                            Записаться
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-content">
+            <div class="sticky-menu">
+                <a class="menu-button" href="#section-description" id="desc-button">Описание</a>
+                <a class="menu-button" href="#section-reviews" id="reviews-button">Отзывы</a>
+                <div class="highlight"></div>
+            </div>
+
+            <hr style="border: 1px solid black; margin-top: 80px;">
+            <div id="section-description" class="section">
+
+            </div>
+            <div id="section-reviews" class="section">
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+{% endblock %}

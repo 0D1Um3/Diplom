@@ -66,6 +66,9 @@ class Sections
     #[ORM\Column]
     private ?bool $softDelete = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $address = null;
+
     public function __construct()
     {
         $this->reviews = new ArrayCollection();
@@ -276,6 +279,18 @@ class Sections
     public function setSoftDelete(bool $softDelete): static
     {
         $this->softDelete = $softDelete;
+
+        return $this;
+    }
+
+    public function getAddress(): ?string
+    {
+        return $this->address;
+    }
+
+    public function setAddress(string $address): static
+    {
+        $this->address = $address;
 
         return $this;
     }

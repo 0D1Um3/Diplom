@@ -66,5 +66,71 @@ header {
     margin-left: 75px;
 }
 
+.footer-container{
+    display: grid;
+    margin: 80px 10% 100px 10%;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.footer-container p{
+    font-size: 14px;
+}
+
+.footer-container a{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+footer .chapter{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .chapter p{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.footer-logo{
+    width: 220px;
+    height: 50px;
+}
+
+footer .chapter a{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+/*Стрелка Вверх*/
+
+.scroll-top-btn {
+    display: none; /* Скрыть кнопку "Вверх" изначально */
+    position: fixed;
+    bottom: 60px;
+    left: 20px;
+    z-index: 99;
+    font-size: 18px;
+    background-color: #2E2E30;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.scroll-top-btn:hover {
+    background-color: #545457;
+}
+
+
+
 
 

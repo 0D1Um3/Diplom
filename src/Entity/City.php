@@ -44,7 +44,7 @@ class City
         return $this->cityName;
     }
 
-    public function setName(string $cityName): static
+    public function setCityName(string $cityName): static
     {
         $this->cityName = $cityName;
 

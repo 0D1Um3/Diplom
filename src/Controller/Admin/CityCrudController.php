@@ -26,8 +26,6 @@ class CityCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
-        return [
-            TextField::new('city_name'),
-        ];
+        yield TextField::new('cityName');
     }
 }

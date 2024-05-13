@@ -30,7 +30,7 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('ArsAthletic');
+            ->setTitle('FitConnect');
     }
 
     public function configureMenuItems(): iterable

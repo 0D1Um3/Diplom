@@ -14,12 +14,6 @@ class Reviews
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 100)]
-    private ?string $author = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $email = null;
-
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
@@ -41,7 +35,7 @@ class Reviews
 
     #[ORM\ManyToOne(inversedBy: 'feedBack')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?User $user_id = null;
+    private ?User $user = null;
 
     #[ORM\Column]
     private ?int $rating = null;
@@ -49,30 +43,6 @@ class Reviews
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getAuthor(): ?string
-    {
-        return $this->author;
-    }
-
-    public function setAuthor(string $author): static
-    {
-        $this->author = $author;
-
-        return $this;
-    }
-
-    public function getEmail(): ?string
-    {
-        return $this->email;
-    }
-
-    public function setEmail(string $email): static
-    {
-        $this->email = $email;
-
-        return $this;
     }
 
     public function getTitle(): ?string
@@ -149,12 +119,12 @@ class Reviews
 
     public function getUserId(): ?User
     {
-        return $this->user_id;
+        return $this->user;
     }
 
     public function setUserId(?User $user_id): static
     {
-        $this->user_id = $user_id;
+        $this->user = $user_id;
 
         return $this;
     }
